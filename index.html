@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarian Aceh Sanggar Bungong Keumang | Seni Budaya Aceh Profesional</title>
+  <meta name="description" content="Sanggar Bungong Keumang - Grup tari Aceh profesional. Tampil di pernikahan, festival budaya, penyambutan tamu, event sekolah & acara resmi. Hubungi kami sekarang!" />
+  <meta name="keywords" content="tari aceh, sanggar aceh, tari saman, sanggar bungong keumang, tari pernikahan aceh, budaya aceh, tari tradisional aceh, grup tari aceh" />
+  <meta name="author" content="Sanggar Bungong Keumang" />
+  <meta property="og:title" content="Tarian Aceh Sanggar Bungong Keumang" />
+  <meta property="og:description" content="Melestarikan Seni Budaya Aceh Dengan Penampilan Berkelas, Islami, dan Penuh Makna." />
+  <meta property="og:image" content="https://i.ibb.co.com/sp3QrGQ9/IMG-20260524-WA0012.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="/" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#fde68a', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309' },
+            emerald: { 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' },
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Raleway', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ====================================================
+       CUSTOM CSS — SANGGAR BUNGONG KEUMANG
+       ==================================================== */
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dark: #9a7a2f;
+      --emerald: #10b981;
+      --emerald-dark: #065f46;
+      --black: #0a0a0a;
+      --black-soft: #111111;
+      --white: #f8f6f0;
+      --glass: rgba(255,255,255,0.05);
+      --glass-border: rgba(201,168,76,0.2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Raleway', sans-serif;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* Custom Cursor */
+    #cursor {
+      position: fixed;
+      width: 12px; height: 12px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.1s ease;
+      mix-blend-mode: difference;
+    }
+    #cursor-ring {
+      position: fixed;
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transition: all 0.15s ease;
+      opacity: 0.6;
+    }
+    body:hover #cursor { opacity: 1; }
+
+    /* Scroll Progress Bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+      z-index: 10000;
+      transition: width 0.1s ease;
+    }
+
+    /* ====================================================
+       PRELOADER
+       ==================================================== */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: #050505;
+      z-index: 99997;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; }
+
+    .preloader-ornament {
+      width: 100px; height: 100px;
+      border: 2px solid transparent;
+      border-top-color: var(--gold);
+      border-right-color: var(--gold);
+      border-radius: 50%;
+      animation: spinGold 1.2s linear infinite;
+      position: relative;
+    }
+    .preloader-ornament::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 2px solid transparent;
+      border-bottom-color: var(--emerald);
+      border-left-color: var(--emerald);
+      border-radius: 50%;
+      animation: spinGold 0.8s linear infinite reverse;
+    }
+    .preloader-ornament::after {
+      content: '✦';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 24px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes spinGold { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity: 0.5; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); } }
+
+    .preloader-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-top: 2rem;
+      letter-spacing: 0.3em;
+      animation: fadeInUp 1s ease 0.5s both;
+      text-align: center;
+    }
+    .preloader-sub {
+      font-size: 0.75rem;
+      color: rgba(201,168,76,0.5);
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1s ease 0.8s both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ====================================================
+       WELCOME POPUP
+       ==================================================== */
+    #welcome-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.6s ease;
+    }
+    #welcome-popup.active { opacity: 1; visibility: visible; }
+
+    .popup-card {
+      background: linear-gradient(135deg, #111 0%, #1a1a0a 50%, #0a1a0a 100%);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      animation: popupIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+      box-shadow: 0 0 60px rgba(201,168,76,0.15), 0 0 120px rgba(16,185,129,0.05);
+    }
+    @keyframes popupIn {
+      from { opacity: 0; transform: scale(0.7) translateY(40px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .popup-ornament {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1rem auto;
+    }
+
+    /* ====================================================
+       NAVBAR
+       ==================================================== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.5rem 2rem;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+    #navbar.scrolled {
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+    .nav-logo span { display: block; font-size: 0.65rem; color: rgba(201,168,76,0.6); letter-spacing: 0.3em; text-transform: uppercase; font-family: 'Raleway', sans-serif; font-weight: 400; }
+
+    .nav-link {
+      color: rgba(248,246,240,0.8);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      position: relative;
+      font-weight: 500;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: var(--gold); }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--gold); transition: all 0.3s ease; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    #mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(5,5,5,0.97);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); letter-spacing: 0.1em; transition: color 0.3s; }
+    #mobile-menu a:hover { color: var(--gold); }
+
+    /* ====================================================
+       HERO SECTION
+       ==================================================== */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.08);
+      transition: opacity 1.5s ease, transform 8s ease;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.15) 40%,
+        rgba(0,0,0,0.5) 70%,
+        rgba(0,0,0,0.85) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid var(--glass-border);
+      background: rgba(201,168,76,0.1);
+      backdrop-filter: blur(10px);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--white);
+      animation: fadeInUp 1s ease 0.5s both;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.5);
+    }
+    .hero-title .gold { color: var(--gold); }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: rgba(248,246,240,0.8);
+      font-style: italic;
+      margin: 1.5rem auto;
+      max-width: 600px;
+      animation: fadeInUp 1s ease 0.7s both;
+      line-height: 1.7;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      animation: fadeInUp 1s ease 0.8s both;
+    }
+    .hero-divider span { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .hero-divider span:last-child { background: linear-gradient(270deg, transparent, var(--gold)); }
+    .hero-divider i { color: var(--gold); font-size: 0.8rem; }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      animation: fadeInUp 1s ease 1s both;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      color: #1a1000;
+      padding: 0.85rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 35px rgba(201,168,76,0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      padding: 0.85rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(248,246,240,0.4);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 20px rgba(201,168,76,0.2);
+    }
+
+    /* Hero stats */
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+      animation: fadeInUp 1s ease 1.2s both;
+    }
+    .stat-item {
+      text-align: center;
+      border-left: 1px solid var(--glass-border);
+      padding-left: 1.5rem;
+    }
+    .stat-item:first-child { border-left: none; padding-left: 0; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(248,246,240,0.6);
+      margin-top: 0.25rem;
+    }
+
+    /* Slide indicators */
+    .slide-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 3;
+    }
+    .slide-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .slide-dot.active {
+      background: var(--gold);
+      width: 24px;
+      border-radius: 3px;
+    }
+
+    /* ====================================================
+       SECTION STYLES
+       ==================================================== */
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-badge::before, .section-badge::after {
+      content: '';
+      width: 30px; height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .section-title .gold { color: var(--gold); }
+
+    .section-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: rgba(248,246,240,0.65);
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .glass-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      box-shadow: 0 8px 40px rgba(201,168,76,0.1);
+      transform: translateY(-4px);
+    }
+
+    /* ====================================================
+       ABOUT SECTION
+       ==================================================== */
+    #tentang { background: #050505; }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media(max-width:768px){ .philosophy-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width:480px){ .philosophy-grid { grid-template-columns: 1fr; } }
+
+    .philo-card {
+      background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(16,185,129,0.03));
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    .philo-card:hover {
+      border-color: rgba(201,168,76,0.5);
+      background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(16,185,129,0.05));
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.15);
+    }
+    .philo-icon { font-size: 2rem; color: var(--gold); margin-bottom: 0.75rem; }
+    .philo-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 0.5rem; font-weight: 600; }
+    .philo-desc { font-size: 0.8rem; color: rgba(248,246,240,0.55); line-height: 1.6; }
+
+    .service-card {
+      background: linear-gradient(135deg, rgba(20,20,15,0.9), rgba(10,20,15,0.9));
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 1.8rem 1.5rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transition: left 0.5s ease;
+    }
+    .service-card:hover::before { left: 100%; }
+    .service-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(201,168,76,0.12);
+    }
+
+    /* ====================================================
+       TRAINER SECTION
+       ==================================================== */
+    #profil { background: linear-gradient(180deg, #050505 0%, #060e0a 100%); }
+
+    .trainer-card {
+      background: linear-gradient(135deg, rgba(20,20,10,0.8), rgba(6,15,10,0.9));
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .trainer-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .avatar-frame {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      padding: 4px;
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 0 0 40px rgba(201,168,76,0.3), 0 0 80px rgba(201,168,76,0.1);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 20px rgba(201,168,76,0.2), 0 0 60px rgba(201,168,76,0.08); }
+      to { box-shadow: 0 0 50px rgba(201,168,76,0.45), 0 0 100px rgba(201,168,76,0.15); }
+    }
+    .avatar-inner {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a0a, #0a1a10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .avatar-placeholder { font-size: 5rem; color: rgba(201,168,76,0.4); }
+
+    /* ====================================================
+       GALLERY
+       ==================================================== */
+    #galeri { background: #030303; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    @media(max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.12); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-item.featured { grid-column: span 2; }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+    #lightbox.active { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 60px rgba(201,168,76,0.2);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid var(--glass-border);
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    .lightbox-close:hover { background: rgba(201,168,76,0.3); color: var(--gold); }
+
+    /* ====================================================
+       TESTIMONIALS
+       ==================================================== */
+    #testimoni { background: #050505; }
+
+    .testi-track {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: hidden;
+      padding: 0.5rem 0;
+    }
+    .testi-card {
+      min-width: 320px;
+      background: linear-gradient(135deg, rgba(20,20,10,0.8), rgba(10,20,15,0.6));
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 1.8rem;
+      transition: all 0.4s ease;
+      flex-shrink: 0;
+    }
+    .testi-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(201,168,76,0.1);
+    }
+    .stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.75rem; }
+    .testi-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: rgba(248,246,240,0.8);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--emerald-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--white);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .testi-name { font-weight: 600; font-size: 0.85rem; color: var(--white); }
+    .testi-loc { font-size: 0.72rem; color: rgba(248,246,240,0.4); }
+
+    /* ====================================================
+       BOOKING SECTION
+       ==================================================== */
+    #booking { background: linear-gradient(180deg, #030303 0%, #060e0a 100%); }
+
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes waPulse {
+      0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+      50% { box-shadow: 0 4px 40px rgba(37,211,102,0.6); }
+    }
+    .wa-btn:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 8px 40px rgba(37,211,102,0.5); }
+
+    /* Floating WA */
+    #wa-float {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 999;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #128C7E, #25D366);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: white;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      animation: floatWA 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+    @keyframes floatWA {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    #wa-float:hover { transform: scale(1.15) !important; }
+
+    /* Back to top */
+    #back-top {
+      position: fixed;
+      bottom: 6rem; right: 2rem;
+      z-index: 998;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+    }
+    #back-top.show { opacity: 1; visibility: visible; }
+    #back-top:hover { background: rgba(201,168,76,0.3); transform: translateY(-3px); }
+
+    /* ====================================================
+       BOOKING FORM
+       ==================================================== */
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; font-weight: 600; }
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      color: var(--white);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: rgba(201,168,76,0.5);
+      background: rgba(201,168,76,0.04);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+    .form-input::placeholder { color: rgba(248,246,240,0.3); }
+    select.form-input option { background: #1a1a0a; color: var(--white); }
+
+    /* ====================================================
+       FAQ
+       ==================================================== */
+    #faq { background: #050505; }
+
+    .faq-item { border-bottom: 1px solid var(--glass-border); }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-icon { color: var(--gold); transition: transform 0.4s ease; flex-shrink: 0; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: rgba(248,246,240,0.65);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1.25rem; }
+
+    /* ====================================================
+       FOOTER
+       ==================================================== */
+    #footer {
+      background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+      border-top: 1px solid var(--glass-border);
+      position: relative;
+      overflow: hidden;
+    }
+    #footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--emerald), var(--gold), transparent);
+    }
+
+    .footer-link { color: rgba(248,246,240,0.5); font-size: 0.85rem; transition: color 0.3s; }
+    .footer-link:hover { color: var(--gold); }
+
+    /* ====================================================
+       REVEAL ANIMATION
+       ==================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* Delay helpers */
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+    .delay-400 { transition-delay: 0.4s; }
+    .delay-500 { transition-delay: 0.5s; }
+
+    /* ====================================================
+       PRESTIGE SECTION (Cinematic / Quote)
+       ==================================================== */
+    #cinematic {
+      position: relative;
+      overflow: hidden;
+      background: #030303;
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+    .cinematic-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://i.ibb.co.com/S7Rx7JxJ/IMG-20260524-WA0014.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.15;
+    }
+    .cinematic-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, #030303 0%, transparent 30%, transparent 70%, #030303 100%);
+    }
+    .cinematic-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-style: italic;
+      color: var(--white);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.5;
+      position: relative;
+      z-index: 2;
+    }
+    .cinematic-quote::before { content: '\201C'; color: var(--gold); font-size: 5rem; line-height: 0; vertical-align: -1.5rem; margin-right: 0.5rem; }
+    .cinematic-quote::after { content: '\201D'; color: var(--gold); font-size: 5rem; line-height: 0; vertical-align: -1.5rem; margin-left: 0.5rem; }
+
+    /* ====================================================
+       TIMELINE (Prestasi)
+       ==================================================== */
+    #prestasi { background: #060606; }
+
+    .timeline-item { position: relative; padding-left: 3rem; padding-bottom: 2.5rem; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0.85rem; top: 2rem; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      position: absolute;
+      left: 0; top: 0;
+      width: 1.75rem; height: 1.75rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #1a1000;
+      box-shadow: 0 0 12px rgba(201,168,76,0.4);
+    }
+
+    /* Social media cards */
+    .social-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    .social-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(201,168,76,0.15);
+    }
+    .social-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    /* ====================================================
+       RESPONSIVE
+       ==================================================== */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      #desktop-nav { display: none; }
+      .trainer-card { padding: 2rem 1.5rem; }
+      .philosophy-grid { grid-template-columns: repeat(2,1fr); }
+      .hero-stats { gap: 1rem; }
+      .stat-item { border-left: none; padding-left: 0; }
+    }
+    @media (max-width: 480px) {
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Map */
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    /* Particles */
+    #particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: var(--gold);
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatParticle linear infinite;
+    }
+    @keyframes floatParticle {
+      0% { opacity: 0; transform: translateY(100vh) rotate(0deg); }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.3; }
+      100% { opacity: 0; transform: translateY(-100px) rotate(720deg); }
+    }
+
+    /* Gallery filter tabs */
+    .filter-tab {
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      border: 1px solid var(--glass-border);
+      background: transparent;
+      color: rgba(248,246,240,0.6);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Raleway', sans-serif;
+    }
+    .filter-tab.active, .filter-tab:hover {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: #1a1000;
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    /* Review form section */
+    .review-card {
+      background: linear-gradient(135deg, rgba(20,20,10,0.6), rgba(10,15,10,0.8));
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+    .star-rate { display: flex; gap: 0.5rem; margin: 0.5rem 0 1rem; }
+    .star-rate i { font-size: 1.5rem; color: rgba(255,255,255,0.2); cursor: pointer; transition: color 0.2s; }
+    .star-rate i.active { color: var(--gold); }
+
+    /* Section separator */
+    .sep {
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+      border-radius: 2px;
+      margin: 1rem 0 2rem;
+    }
+    .sep.center { margin: 1rem auto 2rem; }
+
+    /* Islamic pattern */
+    .pattern-overlay {
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image: 
+        repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%),
+        repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+      background-size: 30px 30px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Particles Background -->
+  <div id="particles"></div>
+
+  <!-- ====================================================
+       PRELOADER
+       ==================================================== -->
+  <div id="preloader">
+    <div class="preloader-ornament"></div>
+    <div class="preloader-text">Sanggar Bungong Keumang</div>
+    <div class="preloader-sub">Seni Budaya Aceh · Profesional · Islami</div>
+  </div>
+
+  <!-- ====================================================
+       WELCOME POPUP
+       ==================================================== -->
+  <div id="welcome-popup">
+    <div class="popup-card">
+      <div style="font-size:2.5rem;color:var(--gold);margin-bottom:1rem;">✦</div>
+      <div class="section-badge" style="margin-bottom:0.5rem;">Selamat Datang</div>
+      <div class="popup-ornament"></div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin:1.2rem 0;line-height:1.4;font-weight:700;">
+        Selamat Datang di<br><span style="color:var(--gold);">Website Resmi</span><br>Sanggar Bungong Keumang
+      </h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(248,246,240,0.6);font-size:1rem;line-height:1.7;margin-bottom:2rem;">
+        Melestarikan Seni Budaya Aceh dengan penampilan berkelas, Islami, dan penuh makna.
+      </p>
+      <button onclick="closePopup()" class="btn-gold" style="width:100%;font-size:0.85rem;padding:0.9rem 2rem;">
+        <i class="fas fa-compass" style="margin-right:0.5rem;"></i>Jelajahi Website
+      </button>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       NAVBAR
+       ==================================================== -->
+  <nav id="navbar">
+    <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+      <a href="#hero" class="nav-logo">
+        ✦ Sanggar Bungong Keumang
+        <span>Seni Budaya Aceh Profesional</span>
+      </a>
+      <div id="desktop-nav" style="display:flex;align-items:center;gap:2rem;">
+        <a href="#tentang" class="nav-link">Tentang</a>
+        <a href="#prestasi" class="nav-link">Prestasi</a>
+        <a href="#galeri" class="nav-link">Galeri</a>
+        <a href="#testimoni" class="nav-link">Testimoni</a>
+        <a href="#booking" class="nav-link">Booking</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+        <a href="https://wa.me/6282370494855?text=Halo+Sanggar+Bungong+Keumang%2C+saya+ingin+booking+penampilan+tari+Aceh." target="_blank" class="btn-gold" style="font-size:0.75rem;padding:0.65rem 1.5rem;text-decoration:none;">
+          <i class="fab fa-whatsapp" style="margin-right:0.4rem;"></i>Booking
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <button onclick="toggleMenu()" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;"><i class="fas fa-times"></i></button>
+    <a href="#tentang" onclick="toggleMenu()">Tentang</a>
+    <a href="#prestasi" onclick="toggleMenu()">Prestasi</a>
+    <a href="#galeri" onclick="toggleMenu()">Galeri</a>
+    <a href="#testimoni" onclick="toggleMenu()">Testimoni</a>
+    <a href="#booking" onclick="toggleMenu()">Booking</a>
+    <a href="#kontak" onclick="toggleMenu()">Kontak</a>
+  </div>
+
+  <!-- ====================================================
+       HERO SECTION
+       ==================================================== -->
+  <section id="hero">
+    <!-- Slides — tambahkan foto baru di array heroImages (JS bawah) -->
+    <div class="hero-slide active" style="background-image:url('https://i.ibb.co.com/sp3QrGQ9/IMG-20260524-WA0012.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('https://i.ibb.co.com/mrLScPnt/IMG-20260526-WA0015.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('https://i.ibb.co.com/S7Rx7JxJ/IMG-20260524-WA0014.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('https://i.ibb.co.com/S4GN18Wv/IMG-20260524-WA0010.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('https://i.ibb.co.com/ccQHHyWZ/IMG-20260524-WA0009.jpg')"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star" style="font-size:0.6rem;color:var(--gold);"></i>
+        Sanggar Tari Aceh Profesional
+        <i class="fas fa-star" style="font-size:0.6rem;color:var(--gold);"></i>
+      </div>
+      <h1 class="hero-title">
+        Tarian Aceh<br><span class="gold">Sanggar Bungong</span><br>Keumang
+      </h1>
+      <div class="hero-divider">
+        <span></span>
+        <i class="fas fa-spa"></i>
+        <span></span>
+      </div>
+      <p class="hero-subtitle">
+        Melestarikan Seni Budaya Aceh Dengan Penampilan Berkelas, Islami, dan Penuh Makna.
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/6282370494855?text=Halo+Sanggar+Bungong+Keumang%2C+saya+ingin+booking+penampilan+tari+Aceh." target="_blank" class="btn-gold">
+          <i class="fab fa-whatsapp" style="margin-right:0.5rem;"></i>Booking Sekarang
+        </a>
+        <a href="#galeri" class="btn-outline">
+          <i class="fas fa-images" style="margin-right:0.5rem;"></i>Lihat Galeri
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Tahun Berpengalaman</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Acara Pernikahan</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Penampilan Total</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Islami & Berbudaya</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Dots -->
+    <div class="slide-dots" id="slide-dots"></div>
+  </section>
+
+  <!-- ====================================================
+       TENTANG KAMI
+       ==================================================== -->
+  <section id="tentang" style="padding:6rem 1.5rem;position:relative;">
+    <div class="pattern-overlay"></div>
+    <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Tentang Kami</div>
+        <h2 class="section-title">Mengenal <span class="gold">Sanggar</span><br>Bungong Keumang</h2>
+        <div class="sep center"></div>
+        <p class="section-desc" style="max-width:700px;margin:0 auto;">
+          Grup tari Aceh profesional yang telah lama beroperasi dan aktif melestarikan budaya Aceh melalui berbagai penampilan dan pelatihan seni tari.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:5rem;" class="reveal">
+        <div class="reveal-left">
+          <img src="https://i.ibb.co.com/S4GN18Wv/IMG-20260524-WA0010.jpg" alt="Sanggar Bungong Keumang" loading="lazy"
+            style="width:100%;border-radius:20px;border:1px solid var(--glass-border);box-shadow:0 8px 40px rgba(0,0,0,0.4);object-fit:cover;aspect-ratio:4/3;" />
+        </div>
+        <div class="reveal-right">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:rgba(248,246,240,0.75);line-height:1.9;margin-bottom:1.5rem;font-style:italic;">
+            Tarian Aceh Sanggar Bungong Keumang merupakan grup tari Aceh profesional yang telah lama beroperasi dan aktif melestarikan budaya Aceh melalui berbagai penampilan dan pelatihan seni tari.
+          </p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(248,246,240,0.6);line-height:1.9;margin-bottom:2rem;font-style:italic;">
+            Kami hadir dengan komitmen menjaga warisan leluhur, melatih generasi muda, dan mengharumkan nama Aceh di setiap pentas dengan nilai budaya dan Islami yang kuat.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--emerald);"></i>
+              <span style="font-size:0.9rem;color:rgba(248,246,240,0.7);">Berpengalaman tampil di berbagai acara bergengsi</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--emerald);"></i>
+              <span style="font-size:0.9rem;color:rgba(248,246,240,0.7);">Menjaga nilai budaya dan Islami dalam setiap penampilan</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--emerald);"></i>
+              <span style="font-size:0.9rem;color:rgba(248,246,240,0.7);">Melatih generasi muda mencintai budaya Aceh</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--emerald);"></i>
+              <span style="font-size:0.9rem;color:rgba(248,246,240,0.7);">Memberikan pelayanan terbaik kepada setiap klien</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filosofi Tari -->
+      <div class="reveal" style="text-align:center;margin-bottom:2.5rem;">
+        <div class="section-badge">Filosofi</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);font-weight:700;">Nilai yang Kami Junjung</h3>
+      </div>
+      <div class="philosophy-grid reveal">
+        <div class="philo-card delay-100">
+          <div class="philo-icon">🤝</div>
+          <div class="philo-title">Kekompakan</div>
+          <div class="philo-desc">Bergerak bersama dalam harmoni yang indah mencerminkan persatuan</div>
+        </div>
+        <div class="philo-card delay-200">
+          <div class="philo-icon">🏵️</div>
+          <div class="philo-title">Kehormatan Budaya</div>
+          <div class="philo-desc">Setiap gerakan membawa makna dan penghormatan terhadap leluhur</div>
+        </div>
+        <div class="philo-card delay-300">
+          <div class="philo-icon">🌹</div>
+          <div class="philo-title">Kesopanan</div>
+          <div class="philo-desc">Tampil dengan penuh adab dan sopan santun sesuai adat Aceh</div>
+        </div>
+        <div class="philo-card delay-100">
+          <div class="philo-icon">☪️</div>
+          <div class="philo-title">Nilai Islami</div>
+          <div class="philo-desc">Seni tari kami berlandaskan nilai-nilai Islam yang kuat</div>
+        </div>
+        <div class="philo-card delay-200">
+          <div class="philo-icon">💫</div>
+          <div class="philo-title">Kebersamaan</div>
+          <div class="philo-desc">Membangun rasa persaudaraan melalui seni budaya bersama</div>
+        </div>
+        <div class="philo-card delay-300">
+          <div class="philo-icon">⚔️</div>
+          <div class="philo-title">Disiplin</div>
+          <div class="philo-desc">Latihan keras dan disiplin tinggi menghasilkan penampilan sempurna</div>
+        </div>
+      </div>
+
+      <!-- Layanan -->
+      <div class="reveal" style="text-align:center;margin:4rem 0 2.5rem;">
+        <div class="section-badge">Layanan Kami</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);font-weight:700;">Kami Siap Tampil Di</h3>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;" class="reveal">
+        <div class="service-card delay-100">
+          <i class="fas fa-rings-wedding" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Pernikahan</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Memperindah hari istimewa Anda</div>
+        </div>
+        <div class="service-card delay-200">
+          <i class="fas fa-star" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Festival Budaya</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Penampilan memukau di festival</div>
+        </div>
+        <div class="service-card delay-300">
+          <i class="fas fa-handshake" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Penyambutan Tamu</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Sambutan berkesan dan berbudaya</div>
+        </div>
+        <div class="service-card delay-100">
+          <i class="fas fa-school" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Event Sekolah</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Penampilan inspiratif untuk pelajar</div>
+        </div>
+        <div class="service-card delay-200">
+          <i class="fas fa-landmark" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Acara Pemerintahan</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Representatif dan profesional</div>
+        </div>
+        <div class="service-card delay-300">
+          <i class="fas fa-calendar-star" style="font-size:2rem;color:var(--gold);margin-bottom:0.75rem;display:block;"></i>
+          <div style="font-weight:700;color:var(--white);margin-bottom:0.4rem;">Event Resmi</div>
+          <div style="font-size:0.8rem;color:rgba(248,246,240,0.5);">Berbagai acara resmi bergengsi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       PROFIL PELATIH
+       ==================================================== -->
+  <section id="profil" style="padding:6rem 1.5rem;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Profil Pelatih</div>
+        <h2 class="section-title">Pendiri &amp; <span class="gold">Pelatih</span></h2>
+        <div class="sep center"></div>
+      </div>
+
+      <div class="trainer-card reveal">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;">
+          <div style="text-align:center;">
+            <div class="avatar-frame">
+              <div class="avatar-inner">
+                <i class="fas fa-user avatar-placeholder"></i>
+              </div>
+            </div>
+            <div style="margin-top:1.5rem;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold);">Riazul Muna</h3>
+              <p style="font-size:0.75rem;letter-spacing:0.25em;color:rgba(248,246,240,0.5);text-transform:uppercase;margin-top:0.25rem;">Pendiri & Pelatih Utama</p>
+            </div>
+            <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:1.25rem;">
+              <a href="https://www.instagram.com/bungong_keumang?MXh5ZGoxemlzY3JsNA==" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;color:var(--gold);transition:all 0.3s;text-decoration:none;"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@sanggar_bungongkeumang" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;color:var(--gold);transition:all 0.3s;text-decoration:none;"><i class="fab fa-tiktok"></i></a>
+              <a href="https://wa.me/6282370494855" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;color:var(--gold);transition:all 0.3s;text-decoration:none;"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div>
+            <blockquote style="font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;color:var(--gold-light);border-left:3px solid var(--gold);padding-left:1.5rem;margin-bottom:2rem;line-height:1.6;">
+              "Tari bukan sekadar gerakan — ia adalah doa, cerita, dan jiwa Aceh yang berbicara."
+            </blockquote>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(248,246,240,0.75);line-height:1.9;margin-bottom:1.25rem;font-style:italic;">
+              Riazul Muna merupakan pendiri sekaligus pelatih Sanggar Bungong Keumang yang memiliki dedikasi tinggi dalam melestarikan budaya Aceh melalui seni tari.
+            </p>
+            <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:rgba(248,246,240,0.6);line-height:1.9;margin-bottom:2rem;font-style:italic;">
+              Pernah mewakili SMAN 1 Matangkuli dalam pertunjukan tari Aceh tingkat nasional dan internasional di Tanjung Karimun — sebuah pencapaian yang membuktikan bahwa semangat melestarikan budaya Aceh membawa nama daerah ke panggung dunia.
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+              <span style="padding:0.4rem 1rem;border-radius:50px;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);font-size:0.75rem;color:var(--gold-light);">🎭 Pelatih Tari Profesional</span>
+              <span style="padding:0.4rem 1rem;border-radius:50px;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);font-size:0.75rem;color:var(--gold-light);">🌍 Pengalaman Internasional</span>
+              <span style="padding:0.4rem 1rem;border-radius:50px;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);font-size:0.75rem;color:var(--gold-light);">☪️ Berbasis Nilai Islami</span>
+              <span style="padding:0.4rem 1rem;border-radius:50px;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);font-size:0.75rem;color:var(--gold-light);">🏫 Pendidik Generasi Muda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       CINEMATIC / QUOTE SECTION
+       ==================================================== -->
+  <section id="cinematic">
+    <div class="cinematic-bg"></div>
+    <div class="cinematic-overlay"></div>
+    <div style="position:relative;z-index:2;" class="reveal">
+      <div class="section-badge" style="justify-content:center;margin-bottom:2rem;">Filosofi Budaya</div>
+      <p class="cinematic-quote">
+        Tari Aceh adalah manifestasi iman, adat, dan keindahan yang menyatu dalam setiap helaan napas penarinya
+      </p>
+      <div style="margin-top:2.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;">
+        <div style="width:40px;height:1px;background:var(--gold);"></div>
+        <span style="font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(201,168,76,0.6);">Sanggar Bungong Keumang</span>
+        <div style="width:40px;height:1px;background:var(--gold);"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       PRESTASI & PENGALAMAN
+       ==================================================== -->
+  <section id="prestasi" style="padding:6rem 1.5rem;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Pencapaian Kami</div>
+        <h2 class="section-title">Prestasi &amp; <span class="gold">Pengalaman</span></h2>
+        <div class="sep center"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="reveal">
+        <div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-trophy"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Nasional & Internasional</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">Tanjung Karimun</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Mewakili SMAN 1 Matangkuli dalam pertunjukan tari Aceh tingkat nasional dan internasional.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-ring"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Pernikahan</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">200+ Acara Pernikahan</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Dipercaya tampil di ratusan acara pernikahan masyarakat Aceh dan sekitarnya.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-star"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Festival</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">Festival Budaya Aceh</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Aktif tampil dan berkontribusi dalam berbagai festival budaya di Aceh.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-landmark"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Pemerintahan</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">Acara Resmi Pemerintah</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Dipercaya tampil dalam berbagai acara resmi pemerintahan daerah.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-school"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Pendidikan</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">Event Sekolah & Kampus</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Sering tampil di berbagai acara sekolah dan kampus sebagai inspirasi generasi muda.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-users"></i></div>
+            <div class="glass-card" style="padding:1.5rem;">
+              <div style="font-size:0.7rem;letter-spacing:0.2em;color:var(--gold);text-transform:uppercase;margin-bottom:0.5rem;">Komunitas</div>
+              <h4 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.5rem;">Melatih Generasi Muda</h4>
+              <p style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Aktif melatih puluhan penari muda agar budaya Aceh terus hidup dan berkembang.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       GALERI FOTO
+       ==================================================== -->
+  <!-- Tambahkan foto baru di array galleryImages di bagian JavaScript -->
+  <section id="galeri" style="padding:6rem 1.5rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+        <div class="section-badge">Dokumentasi</div>
+        <h2 class="section-title">Galeri <span class="gold">Foto</span></h2>
+        <div class="sep center"></div>
+        <p class="section-desc">Setiap gambar adalah cerita tentang keindahan budaya Aceh.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;" class="reveal">
+        <button class="filter-tab active" onclick="filterGallery('all',this)">Semua</button>
+        <button class="filter-tab" onclick="filterGallery('penampilan',this)">Penampilan</button>
+        <button class="filter-tab" onclick="filterGallery('latihan',this)">Latihan</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid reveal" id="gallery-grid">
+        <!-- Foto Utama (Featured) -->
+        <div class="gallery-item featured" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/sp3QrGQ9/IMG-20260524-WA0012.jpg')">
+          <img src="https://i.ibb.co.com/sp3QrGQ9/IMG-20260524-WA0012.jpg" alt="Penampilan Sanggar Bungong Keumang" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i> Lihat Foto</span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/mrLScPnt/IMG-20260526-WA0015.jpg')">
+          <img src="https://i.ibb.co.com/mrLScPnt/IMG-20260526-WA0015.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/S7Rx7JxJ/IMG-20260524-WA0014.jpg')">
+          <img src="https://i.ibb.co.com/S7Rx7JxJ/IMG-20260524-WA0014.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/S4GN18Wv/IMG-20260524-WA0010.jpg')">
+          <img src="https://i.ibb.co.com/S4GN18Wv/IMG-20260524-WA0010.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/ccQHHyWZ/IMG-20260524-WA0009.jpg')">
+          <img src="https://i.ibb.co.com/ccQHHyWZ/IMG-20260524-WA0009.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/zWSL7DZ3/Whats-App-Image-2025-08-19-at-19-34-52-1.jpg')">
+          <img src="https://i.ibb.co.com/zWSL7DZ3/Whats-App-Image-2025-08-19-at-19-34-52-1.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/kVLCzVnt/Whats-App-Image-2025-08-19-at-19-34-52.jpg')">
+          <img src="https://i.ibb.co.com/kVLCzVnt/Whats-App-Image-2025-08-19-at-19-34-52.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item featured" data-cat="penampilan" onclick="openLightbox('https://i.ibb.co.com/TqdQb8Td/Whats-App-Image-2025-08-19-at-19-34-53.jpg')">
+          <img src="https://i.ibb.co.com/TqdQb8Td/Whats-App-Image-2025-08-19-at-19-34-53.jpg" alt="Penampilan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i> Lihat Foto</span></div>
+        </div>
+        <!-- Foto Latihan -->
+        <div class="gallery-item" data-cat="latihan" onclick="openLightbox('https://i.ibb.co.com/q3sR2cQG/Whats-App-Image-2025-08-20-at-01-46-02.jpg')">
+          <img src="https://i.ibb.co.com/q3sR2cQG/Whats-App-Image-2025-08-20-at-01-46-02.jpg" alt="Latihan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="latihan" onclick="openLightbox('https://i.ibb.co.com/JjpKyJQV/Whats-App-Image-2025-08-20-at-01-46-01-1.jpg')">
+          <img src="https://i.ibb.co.com/JjpKyJQV/Whats-App-Image-2025-08-20-at-01-46-01-1.jpg" alt="Latihan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+        <div class="gallery-item" data-cat="latihan" onclick="openLightbox('https://i.ibb.co.com/wrRtPC22/Whats-App-Image-2025-08-20-at-01-46-01.jpg')">
+          <img src="https://i.ibb.co.com/wrRtPC22/Whats-App-Image-2025-08-20-at-01-46-01.jpg" alt="Latihan" loading="lazy" />
+          <div class="gallery-overlay"><span style="color:var(--white);font-size:0.8rem;"><i class="fas fa-search-plus"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <img id="lightbox-img" src="" alt="Gallery" />
+  </div>
+
+  <!-- ====================================================
+       TESTIMONI
+       ==================================================== -->
+  <section id="testimoni" style="padding:6rem 1.5rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Ulasan Klien</div>
+        <h2 class="section-title">Kata Mereka <span class="gold">Tentang Kami</span></h2>
+        <div class="sep center"></div>
+      </div>
+
+      <!-- Slider -->
+      <div style="overflow:hidden;position:relative;" class="reveal">
+        <div class="testi-track" id="testi-track"></div>
+      </div>
+
+      <!-- Form Ulasan -->
+      <div class="review-card reveal" style="margin-top:3.5rem;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--white);margin-bottom:0.5rem;">Berikan Ulasan Anda</h3>
+        <p style="font-size:0.85rem;color:rgba(248,246,240,0.4);margin-bottom:1.5rem;">Ulasan Anda sangat berarti bagi kami</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+          <div class="form-group">
+            <label class="form-label">Nama Anda</label>
+            <input type="text" class="form-input" id="review-name" placeholder="Masukkan nama Anda" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Rating</label>
+            <div class="star-rate" id="star-rate">
+              <i class="fas fa-star" data-star="1"></i>
+              <i class="fas fa-star" data-star="2"></i>
+              <i class="fas fa-star" data-star="3"></i>
+              <i class="fas fa-star" data-star="4"></i>
+              <i class="fas fa-star" data-star="5"></i>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Komentar</label>
+          <textarea class="form-input" id="review-text" rows="3" placeholder="Bagikan pengalaman Anda bersama Sanggar Bungong Keumang..."></textarea>
+        </div>
+        <button onclick="submitReview()" class="btn-gold" style="width:100%;padding:0.9rem;">
+          <i class="fas fa-paper-plane" style="margin-right:0.5rem;"></i>Kirim Ulasan
+        </button>
+        <div id="review-success" style="display:none;margin-top:1rem;text-align:center;color:var(--emerald);font-size:0.9rem;">
+          <i class="fas fa-check-circle" style="margin-right:0.5rem;"></i>Terima kasih! Ulasan Anda telah dikirim.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       BOOKING SECTION
+       ==================================================== -->
+  <section id="booking" style="padding:6rem 1.5rem;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Pesan Penampilan</div>
+        <h2 class="section-title">Booking <span class="gold">Penampilan</span></h2>
+        <div class="sep center"></div>
+        <p class="section-desc">Hubungi kami sekarang untuk memperindah acara Anda dengan pesona tari Aceh.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;" class="reveal">
+        <!-- WA & Info -->
+        <div>
+          <div class="glass-card" style="padding:2.5rem;margin-bottom:1.5rem;text-align:center;">
+            <i class="fab fa-whatsapp" style="font-size:3rem;color:#25D366;margin-bottom:1rem;display:block;"></i>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.5rem;">Hubungi via WhatsApp</h3>
+            <p style="font-size:0.85rem;color:rgba(248,246,240,0.5);margin-bottom:1.5rem;">Riazul Muna — Pimpinan Sanggar</p>
+            <p style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin-bottom:1.5rem;">0823-7049-4855</p>
+            <a href="https://wa.me/6282370494855?text=Halo+Sanggar+Bungong+Keumang%2C+saya+ingin+booking+penampilan+tari+Aceh." target="_blank" class="wa-btn" style="display:inline-flex;">
+              <i class="fab fa-whatsapp"></i>Chat Sekarang
+            </a>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="glass-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-ring" style="color:var(--gold);font-size:1.3rem;width:24px;text-align:center;"></i>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--white);">Pernikahan & Resepsi</div>
+                <div style="font-size:0.78rem;color:rgba(248,246,240,0.4);">Tampilan mewah untuk hari istimewa</div>
+              </div>
+            </div>
+            <div class="glass-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-star" style="color:var(--gold);font-size:1.3rem;width:24px;text-align:center;"></i>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--white);">Festival & Event Budaya</div>
+                <div style="font-size:0.78rem;color:rgba(248,246,240,0.4);">Penampilan kelas dunia</div>
+              </div>
+            </div>
+            <div class="glass-card" style="padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-handshake" style="color:var(--gold);font-size:1.3rem;width:24px;text-align:center;"></i>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;color:var(--white);">Penyambutan & Acara Resmi</div>
+                <div style="font-size:0.78rem;color:rgba(248,246,240,0.4);">Kesan pertama yang tak terlupakan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="glass-card" style="padding:2.5rem;">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:1.5rem;">Form Booking</h3>
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-input" id="book-name" placeholder="Nama Anda" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp</label>
+            <input type="tel" class="form-input" id="book-phone" placeholder="08xx-xxxx-xxxx" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Jenis Acara</label>
+            <select class="form-input" id="book-event">
+              <option value="">Pilih jenis acara...</option>
+              <option value="Pernikahan">Pernikahan / Resepsi</option>
+              <option value="Festival Budaya">Festival Budaya</option>
+              <option value="Penyambutan Tamu">Penyambutan Tamu VIP</option>
+              <option value="Event Sekolah">Event Sekolah / Kampus</option>
+              <option value="Acara Pemerintahan">Acara Pemerintahan</option>
+              <option value="Event Lainnya">Event Resmi Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tanggal Acara</label>
+            <input type="date" class="form-input" id="book-date" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pesan / Keterangan</label>
+            <textarea class="form-input" id="book-msg" rows="3" placeholder="Ceritakan tentang acara Anda..."></textarea>
+          </div>
+          <button onclick="sendBooking()" class="btn-gold" style="width:100%;padding:0.9rem;">
+            <i class="fab fa-whatsapp" style="margin-right:0.5rem;"></i>Kirim via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       SOSIAL MEDIA
+       ==================================================== -->
+  <section style="padding:5rem 1.5rem;background:#050505;">
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
+      <div class="reveal">
+        <div class="section-badge">Ikuti Kami</div>
+        <h2 class="section-title">Media <span class="gold">Sosial</span></h2>
+        <div class="sep center"></div>
+        <p class="section-desc" style="margin-bottom:3rem;">Ikuti kami untuk update penampilan dan kegiatan terbaru</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="reveal">
+        <a href="https://www.instagram.com/bungong_keumang?MXh5ZGoxemlzY3JsNA==" target="_blank" class="social-card" style="text-decoration:none;background:linear-gradient(135deg, rgba(131,58,180,0.1), rgba(253,29,29,0.1), rgba(252,176,69,0.1));border-color:rgba(131,58,180,0.3);">
+          <div class="social-icon">📸</div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:0.5rem;">Instagram</h4>
+          <p style="font-size:0.82rem;color:rgba(248,246,240,0.5);margin-bottom:1rem;">@bungong_keumang</p>
+          <span style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:#f77737;font-weight:600;">Ikuti Sekarang →</span>
+        </a>
+        <a href="https://www.tiktok.com/@sanggar_bungongkeumang" target="_blank" class="social-card" style="text-decoration:none;background:linear-gradient(135deg, rgba(0,0,0,0.3), rgba(255,0,80,0.05), rgba(0,242,234,0.05));border-color:rgba(0,242,234,0.2);">
+          <div class="social-icon">🎵</div>
+          <h4 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--white);margin-bottom:0.5rem;">TikTok</h4>
+          <p style="font-size:0.82rem;color:rgba(248,246,240,0.5);margin-bottom:1rem;">@sanggar_bungongkeumang</p>
+          <span style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:#00f2ea;font-weight:600;">Tonton Sekarang →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       GOOGLE MAPS & KONTAK
+       ==================================================== -->
+  <section id="kontak" style="padding:6rem 1.5rem;background:#030303;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Lokasi & Kontak</div>
+        <h2 class="section-title">Temukan <span class="gold">Kami</span></h2>
+        <div class="sep center"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="reveal">
+        <div>
+          <div class="map-container" style="margin-bottom:1.5rem;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15933.72!2d97.1!3d4.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zGampong+Tunong+Krueng%2C+Paya+Bakong%2C+Aceh+Utara!5e0!3m2!1sid!2sid!4v1620000000000"
+              width="100%" height="320" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a href="https://goo.gl/maps/AcehUtara" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:0.5rem;text-decoration:none;font-size:0.8rem;">
+            <i class="fas fa-map-marker-alt"></i>Buka di Google Maps
+          </a>
+        </div>
+        <div>
+          <div class="glass-card" style="padding:2.5rem;">
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:2rem;">Informasi Kontak</h3>
+            <div style="display:flex;flex-direction:column;gap:1.5rem;">
+              <div style="display:flex;gap:1rem;align-items:flex-start;">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <i class="fas fa-map-marker-alt" style="color:var(--gold);"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--white);margin-bottom:0.3rem;">Alamat</div>
+                  <div style="font-size:0.85rem;color:rgba(248,246,240,0.55);line-height:1.6;">Gampong Tunong Krueng, Kecamatan Paya Bakong, Kabupaten Aceh Utara, Aceh</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <i class="fab fa-whatsapp" style="color:var(--gold);"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--white);margin-bottom:0.1rem;">WhatsApp</div>
+                  <a href="https://wa.me/6282370494855" style="color:rgba(248,246,240,0.55);font-size:0.85rem;text-decoration:none;">0823-7049-4855 (Riazul Muna)</a>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <i class="fab fa-instagram" style="color:var(--gold);"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--white);margin-bottom:0.1rem;">Instagram</div>
+                  <a href="https://www.instagram.com/bungong_keumang?MXh5ZGoxemlzY3JsNA==" target="_blank" style="color:rgba(248,246,240,0.55);font-size:0.85rem;text-decoration:none;">@bungong_keumang</a>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;">
+                <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,168,76,0.1);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <i class="fab fa-tiktok" style="color:var(--gold);"></i>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.9rem;color:var(--white);margin-bottom:0.1rem;">TikTok</div>
+                  <a href="https://www.tiktok.com/@sanggar_bungongkeumang" target="_blank" style="color:rgba(248,246,240,0.55);font-size:0.85rem;text-decoration:none;">@sanggar_bungongkeumang</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FAQ
+       ==================================================== -->
+  <section id="faq" style="padding:6rem 1.5rem;">
+    <div style="max-width:800px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:4rem;" class="reveal">
+        <div class="section-badge">Pertanyaan Umum</div>
+        <h2 class="section-title">FAQ <span class="gold">Sering Ditanya</span></h2>
+        <div class="sep center"></div>
+      </div>
+      <div class="reveal" id="faq-container">
+        <!-- FAQ items are rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer id="footer" style="padding:4rem 1.5rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);font-weight:700;margin-bottom:0.25rem;">✦ Sanggar Bungong Keumang</div>
+          <div style="font-size:0.65rem;letter-spacing:0.3em;color:rgba(201,168,76,0.4);text-transform:uppercase;margin-bottom:1.25rem;">Seni Budaya Aceh Profesional</div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(248,246,240,0.45);line-height:1.8;max-width:280px;">Melestarikan seni budaya Aceh dengan penampilan berkelas, Islami, dan penuh makna untuk setiap momen.</p>
+          <div style="display:flex;gap:0.75rem;margin-top:1.5rem;">
+            <a href="https://wa.me/6282370494855" target="_blank" style="width:38px;height:38px;border-radius:50%;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);display:flex;align-items:center;justify-content:center;color:#25D366;text-decoration:none;transition:all 0.3s;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/bungong_keumang?MXh5ZGoxemlzY3JsNA==" target="_blank" style="width:38px;height:38px;border-radius:50%;background:rgba(131,58,180,0.1);border:1px solid rgba(131,58,180,0.3);display:flex;align-items:center;justify-content:center;color:#f77737;text-decoration:none;transition:all 0.3s;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@sanggar_bungongkeumang" target="_blank" style="width:38px;height:38px;border-radius:50%;background:rgba(0,242,234,0.05);border:1px solid rgba(0,242,234,0.2);display:flex;align-items:center;justify-content:center;color:#00f2ea;text-decoration:none;transition:all 0.3s;"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:600;">Navigasi</h4>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            <a href="#tentang" class="footer-link">Tentang Kami</a>
+            <a href="#profil" class="footer-link">Profil Pelatih</a>
+            <a href="#prestasi" class="footer-link">Prestasi</a>
+            <a href="#galeri" class="footer-link">Galeri</a>
+            <a href="#testimoni" class="footer-link">Testimoni</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:600;">Layanan</h4>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            <a href="#booking" class="footer-link">Pernikahan</a>
+            <a href="#booking" class="footer-link">Festival Budaya</a>
+            <a href="#booking" class="footer-link">Penyambutan Tamu</a>
+            <a href="#booking" class="footer-link">Event Sekolah</a>
+            <a href="#booking" class="footer-link">Acara Pemerintahan</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem;font-weight:600;">Kontak</h4>
+          <div style="display:flex;flex-direction:column;gap:0.6rem;">
+            <span style="font-size:0.85rem;color:rgba(248,246,240,0.45);">0823-7049-4855</span>
+            <span style="font-size:0.82rem;color:rgba(248,246,240,0.35);line-height:1.6;">Gampong Tunong Krueng, Paya Bakong, Aceh Utara</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--glass-border);padding-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+        <p style="font-size:0.78rem;color:rgba(248,246,240,0.3);">© 2026 Tarian Aceh Sanggar Bungong Keumang. All Rights Reserved.</p>
+        <p style="font-size:0.75rem;color:rgba(248,246,240,0.2);">Melestarikan Budaya Aceh dengan ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/6282370494855?text=Halo+Sanggar+Bungong+Keumang%2C+saya+ingin+booking+penampilan+tari+Aceh." target="_blank" id="wa-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ====================================================
+       JAVASCRIPT
+       ==================================================== -->
+  <script>
+  // ====================================================
+  // PRELOADER
+  // ====================================================
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('preloader').classList.add('hidden');
+      setTimeout(() => {
+        // Show welcome popup if first visit
+        if (!sessionStorage.getItem('visited')) {
+          document.getElementById('welcome-popup').classList.add('active');
+          sessionStorage.setItem('visited', '1');
+        }
+      }, 400);
+    }, 2000);
+  });
+
+  function closePopup() {
+    document.getElementById('welcome-popup').classList.remove('active');
+  }
+
+  // ====================================================
+  // CUSTOM CURSOR
+  // ====================================================
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursor-ring');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX - 6 + 'px';
+    cursor.style.top = e.clientY - 6 + 'px';
+    ring.style.left = e.clientX - 18 + 'px';
+    ring.style.top = e.clientY - 18 + 'px';
+  });
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'scale(2)';
+      ring.style.transform = 'scale(1.5)';
+      ring.style.opacity = '1';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'scale(1)';
+      ring.style.transform = 'scale(1)';
+      ring.style.opacity = '0.6';
+    });
+  });
+
+  // ====================================================
+  // SCROLL PROGRESS & NAVBAR
+  // ====================================================
+  window.addEventListener('scroll', () => {
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+
+    document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+  });
+
+  // ====================================================
+  // MOBILE MENU
+  // ====================================================
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+
+  // ====================================================
+  // HERO SLIDER
+  // ====================================================
+  const slides = document.querySelectorAll('.hero-slide');
+  const dotsContainer = document.getElementById('slide-dots');
+  let current = 0;
+  let slideInterval;
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  function goToSlide(n) {
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+  }
+
+  function nextSlide() {
+    goToSlide((current + 1) % slides.length);
+  }
+
+  slideInterval = setInterval(nextSlide, 5000);
+
+  // ====================================================
+  // SCROLL REVEAL ANIMATION
+  // ====================================================
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ====================================================
+  // GALLERY FILTER
+  // ====================================================
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  // ====================================================
+  // LIGHTBOX
+  // ====================================================
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // ====================================================
+  // TESTIMONIALS DATA (50 komentar)
+  // Untuk mengganti testimoni, edit array di bawah ini
+  // ====================================================
+  const testimonials = [
+    { name: "Fatimah Zahra", loc: "Lhokseumawe", rating: 5, text: "Penampilan yang sungguh memukau! Tamu undangan langsung terkesima saat mereka tampil di resepsi pernikahan adik saya. Sangat profesional!" },
+    { name: "Muhammad Rizal", loc: "Banda Aceh", rating: 5, text: "Tarian yang sangat kompak dan elegan. Membuat suasana pernikahan kami menjadi sangat berkesan dan penuh budaya." },
+    { name: "Siti Aisyah", loc: "Bireuen", rating: 5, text: "Recommended banget! Gerakan tari yang sinkron dan ekspresi yang luar biasa. Semua tamu tidak bisa menahan kagum." },
+    { name: "Anwar Sadat", loc: "Aceh Utara", rating: 5, text: "Sanggar yang profesional dengan harga yang sepadan. Pelayanan ramah, tepat waktu, dan penampilan di atas ekspektasi." },
+    { name: "Nurul Hidayah", loc: "Sigli", rating: 5, text: "Budaya Aceh terasa sangat hidup saat mereka tampil! Suasana adat yang kental membuat momen jadi tak terlupakan." },
+    { name: "Ahmad Fauzi", loc: "Sabang", rating: 5, text: "Sudah dua kali menggunakan jasa mereka untuk acara keluarga. Selalu konsisten dan selalu memukau penonton." },
+    { name: "Rahmawati", loc: "Langsa", rating: 5, text: "Nilai Islami yang sangat terasa dalam setiap gerakan. Bangga dengan sanggar yang menjaga adat dan agama bersamaan." },
+    { name: "Teuku Daud", loc: "Meulaboh", rating: 5, text: "Paling terbaik di daerah kami! Sudah merekomendasikan ke banyak teman dan semua puas dengan penampilan mereka." },
+    { name: "Mariani", loc: "Subulussalam", rating: 5, text: "Sanggar yang sangat berdedikasi. Terlihat dari kekompakan mereka bahwa latihan yang dilakukan sungguh-sungguh." },
+    { name: "Zulkifli", loc: "Takengon", rating: 5, text: "Event penyambutan tamu VIP di kantor kami menjadi sangat berkesan berkat penampilan Sanggar Bungong Keumang." },
+    { name: "Rina Fitriani", loc: "Lhokseumawe", rating: 5, text: "Tari Aceh yang autentik dan penuh makna. Kostum yang indah, gerakan yang presisi, dan ekspresi yang memesona." },
+    { name: "Harun Al-Rasyid", loc: "Aceh Utara", rating: 5, text: "Kagum dengan kedisiplinan para penari. Mereka tampil dengan sempurna meski persiapan waktu cukup singkat." },
+    { name: "Dina Safitri", loc: "Bireuen", rating: 5, text: "Sangat membantu melestarikan budaya Aceh! Anak-anak saya jadi terinspirasi untuk belajar tari setelah menyaksikan." },
+    { name: "Rusli Hamdan", loc: "Banda Aceh", rating: 5, text: "Penampilan di festival budaya kecamatan kami sangat luar biasa. Mendapat sambutan meriah dari seluruh penonton." },
+    { name: "Nabilah", loc: "Pidie", rating: 5, text: "Gerakan tari yang fluid dan harmonis. Terlihat bahwa setiap penari benar-benar memahami makna di balik setiap gerak." },
+    { name: "Irfan Maulana", loc: "Aceh Tenggara", rating: 5, text: "Sanggar terbaik di Aceh Utara! Pelayanan prima dari awal booking hingga selesai penampilan. Sangat direkomendasikan!" },
+    { name: "Khairani", loc: "Lhoksukon", rating: 5, text: "Semua tamu di resepsi pernikahan saya langsung berdiri dan bertepuk tangan. Penampilan yang benar-benar wow!" },
+    { name: "Abdul Aziz", loc: "Paya Bakong", rating: 5, text: "Kebanggaan tersendiri memiliki sanggar berkualitas tinggi di daerah kami. Terus semangat melestarikan budaya Aceh!" },
+    { name: "Safrida", loc: "Kutacane", rating: 5, text: "Pertama kali menyewa sanggar ini dan langsung jatuh cinta dengan profesionalisme mereka. Tidak akan pindah ke lain hati!" },
+    { name: "Firdaus", loc: "Idi", rating: 5, text: "Harga terjangkau, kualitas premium. Itulah yang saya rasakan setelah menggunakan jasa Sanggar Bungong Keumang." },
+    { name: "Yulia Andari", loc: "Calang", rating: 5, text: "Tamu dari luar daerah sangat kagum saat menyaksikan tari Aceh yang dibawakan sanggar ini. Membanggakan!" },
+    { name: "Marzuki", loc: "Singkil", rating: 5, text: "Koordinasi yang sangat baik antar penari. Setiap gerakan tersinkronisasi dengan indah mencerminkan latihan keras." },
+    { name: "Fitri Yanti", loc: "Krueng Geukueh", rating: 5, text: "Penampilan di acara syukuran perusahaan kami mendapat pujian dari para direksi dan tamu undangan." },
+    { name: "Nasruddin", loc: "Matangkuli", rating: 5, text: "Sanggar yang memiliki jiwa dan dedikasi nyata. Bukan sekadar menari tapi menyampaikan pesan budaya yang dalam." },
+    { name: "Halimah", loc: "Lhokseumawe", rating: 5, text: "Sangat puas! Dari kostum yang cantik, musik yang pas, hingga gerakan yang kompak. Sempurna dalam satu paket." },
+    { name: "Badrun", loc: "Bireuen", rating: 5, text: "Penampilan di pernikahan anak kami membuat suasana makin sakral dan berbudaya. Terima kasih Sanggar Bungong Keumang!" },
+    { name: "Dewi Rahmah", loc: "Sigli", rating: 5, text: "Satu kata: LUAR BIASA! Tidak pernah menyangka penampilan tari Aceh bisa sebagus dan seprofesional ini." },
+    { name: "Rahmat Hidayat", loc: "Aceh Besar", rating: 5, text: "Booking jauh hari sebelumnya dan hasilnya memuaskan. Mereka benar-benar mempersiapkan diri dengan matang." },
+    { name: "Syarifah", loc: "Pidie Jaya", rating: 5, text: "Nilai seni yang tinggi dan tetap menjaga syariat Islam. Inilah budaya Aceh yang sesungguhnya harus dilestarikan." },
+    { name: "Hasbi", loc: "Aceh Jaya", rating: 5, text: "Momen pernikahan kami semakin berkesan dengan kehadiran sanggar ini. Seluruh keluarga besar sangat puas!" },
+    { name: "Mutia Rahma", loc: "Banda Aceh", rating: 5, text: "Profesional, tepat waktu, dan ramah. Tiga kata yang menggambarkan pengalaman saya dengan Sanggar Bungong Keumang." },
+    { name: "Hendri", loc: "Tamiang", rating: 5, text: "Acara sekolah kami menjadi sangat meriah dan berbudaya berkat penampilan sanggar ini. Para siswa sangat terinspirasi!" },
+    { name: "Raudah", loc: "Nisam", rating: 5, text: "Penari yang berbakat dan berbudi. Mereka tidak hanya menari tapi juga mendidik lewat setiap gerakan yang bermakna." },
+    { name: "Amirul Mukminin", loc: "Blang Bintang", rating: 5, text: "Sangat berkesan! Event budaya desa kami menjadi hidup dengan kehadiran Sanggar Bungong Keumang yang memukau." },
+    { name: "Zubaidah", loc: "Kuta Makmur", rating: 5, text: "Dari awal koordinasi sampai selesai penampilan, semua berjalan lancar. Tim yang solid dan sangat profesional." },
+    { name: "Tarmizi", loc: "Samalanga", rating: 5, text: "Tari Saman dan tarian Aceh lainnya yang ditampilkan sangat autentik. Tidak ada yang bisa menandingi kualitas mereka." },
+    { name: "Rohani", loc: "Geudong", rating: 5, text: "Para penari sangat menghayati setiap gerakan. Emosi dan semangat mereka terasa sampai ke penonton. Luar biasa!" },
+    { name: "Khairul Fahmi", loc: "Cunda", rating: 5, text: "Sudah berkali-kali menggunakan jasa mereka untuk berbagai acara. Kualitas selalu konsisten dan tidak pernah mengecewakan." },
+    { name: "Yusniar", loc: "Matangkuli", rating: 5, text: "Bangga sekali dengan adanya sanggar berkualitas di daerah kami. Semoga terus berkembang dan makin dikenal luas!" },
+    { name: "Arafat", loc: "Lhoksukon", rating: 5, text: "Momen wisuda kampus menjadi sangat spesial dengan kehadiran sanggar ini. Standing ovation dari semua yang hadir!" },
+    { name: "Nurmala", loc: "Bireuen", rating: 5, text: "Sanggar yang penuh dedikasi dan cinta budaya. Terlihat dari cara mereka mempersembahkan setiap tarian dengan hati." },
+    { name: "Syahrul", loc: "Peureulak", rating: 5, text: "Penampilan yang memadukan keindahan gerakan dengan kostum khas Aceh yang memukau. Budaya kita memang luar biasa!" },
+    { name: "Muliani", loc: "Tanah Jambo Aye", rating: 5, text: "Sangat rekomended untuk acara pernikahan! Tamu-tamu langsung membicarakan betapa indahnya penampilan tari Aceh ini." },
+    { name: "Yusuf Qaradawi", loc: "Paya Bakong", rating: 5, text: "Kebanggaan daerah Paya Bakong! Sanggar Bungong Keumang membawa nama baik Aceh Utara ke tingkat yang lebih tinggi." },
+    { name: "Nazirah", loc: "Lhokseumawe", rating: 5, text: "Penampilan yang sangat islami namun tetap memukau. Ini yang membuat saya memilih sanggar ini dibandingkan yang lain." },
+    { name: "Ridwan", loc: "Dewantara", rating: 5, text: "Tim yang solid, koreografi yang matang, dan semangat yang luar biasa. Terima kasih sudah memperindah acara kami!" },
+    { name: "Ummi Kalsum", loc: "Muara Batu", rating: 5, text: "Belum pernah menyaksikan tari Aceh yang seindah dan sekompak ini. Sanggar Bungong Keumang memang terbaik!" },
+    { name: "Fuad Hasan", loc: "Syamtalira Aron", rating: 5, text: "Penampilan di HUT daerah kami mendapat pujian dari bupati dan para tamu undangan. Terima kasih, terus berkarya!" },
+    { name: "Mariana", loc: "Banda Baro", rating: 5, text: "Sungguh membanggakan! Sanggar ini membuktikan bahwa seni tari Aceh tidak kalah dengan seni dari daerah lain." },
+    { name: "Sulaiman", loc: "Sawang", rating: 5, text: "Bisa tampil di luar daerah juga! Sanggar ini fleksibel dan tetap profesional dimanapun mereka pentas. Salut!" },
+  ];
+
+  function renderTestimonials() {
+    const stored = JSON.parse(localStorage.getItem('reviews') || '[]');
+    const all = [...testimonials, ...stored];
+    const track = document.getElementById('testi-track');
+    track.innerHTML = '';
+    all.forEach(t => {
+      const card = document.createElement('div');
+      card.className = 'testi-card';
+      card.innerHTML = `
+        <div class="stars">${'★'.repeat(t.rating)}${'☆'.repeat(5 - t.rating)}</div>
+        <div class="testi-text">"${t.text}"</div>
+        <div class="testi-author">
+          <div class="testi-avatar">${t.name.charAt(0)}</div>
+          <div>
+            <div class="testi-name">${t.name}</div>
+            <div class="testi-loc">📍 ${t.loc}</div>
+          </div>
+        </div>
+      `;
+      track.appendChild(card);
+    });
+
+    // Auto scroll
+    let scrollPos = 0;
+    setInterval(() => {
+      scrollPos += 1;
+      if (scrollPos >= track.scrollWidth - track.parentElement.offsetWidth) scrollPos = 0;
+      track.style.transform = `translateX(-${scrollPos}px)`;
+    }, 30);
+  }
+
+  // ====================================================
+  // STAR RATING
+  // ====================================================
+  let selectedRating = 5;
+  const stars = document.querySelectorAll('.star-rate i');
+  stars.forEach((star, i) => {
+    star.classList.toggle('active', i < 5);
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.dataset.star);
+      stars.forEach((s, j) => s.classList.toggle('active', j < selectedRating));
+    });
+    star.addEventListener('mouseenter', () => {
+      const n = parseInt(star.dataset.star);
+      stars.forEach((s, j) => s.classList.toggle('active', j < n));
+    });
+    star.addEventListener('mouseleave', () => {
+      stars.forEach((s, j) => s.classList.toggle('active', j < selectedRating));
+    });
+  });
+
+  // ====================================================
+  // SUBMIT REVIEW
+  // ====================================================
+  function submitReview() {
+    const name = document.getElementById('review-name').value.trim();
+    const text = document.getElementById('review-text').value.trim();
+    if (!name || !text) { alert('Mohon isi nama dan komentar terlebih dahulu.'); return; }
+    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
+    reviews.unshift({ name, loc: 'Aceh', rating: selectedRating, text });
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    document.getElementById('review-name').value = '';
+    document.getElementById('review-text').value = '';
+    document.getElementById('review-success').style.display = 'block';
+    setTimeout(() => document.getElementById('review-success').style.display = 'none', 3000);
+    renderTestimonials();
+  }
+
+  // ====================================================
+  // BOOKING via WHATSAPP
+  // ====================================================
+  function sendBooking() {
+    const name = document.getElementById('book-name').value.trim();
+    const phone = document.getElementById('book-phone').value.trim();
+    const event = document.getElementById('book-event').value;
+    const date = document.getElementById('book-date').value;
+    const msg = document.getElementById('book-msg').value.trim();
+    if (!name || !event) { alert('Mohon isi nama dan jenis acara.'); return; }
+    // Cara mengganti nomor WhatsApp: ganti 6282370494855 di bawah dengan nomor baru
+    const text = encodeURIComponent(
+      `Halo Sanggar Bungong Keumang, saya ingin booking penampilan tari Aceh.\n\n` +
+      `Nama: ${name}\nNo. WA: ${phone}\nJenis Acara: ${event}\nTanggal: ${date || 'Belum ditentukan'}\nKeterangan: ${msg || '-'}`
+    );
+    window.open(`https://wa.me/6282370494855?text=${text}`, '_blank');
+  }
+
+  // ====================================================
+  // FAQ
+  // ====================================================
+  const faqs = [
+    { q: 'Bisa tampil di mana saja?', a: 'Ya! Sanggar Bungong Keumang siap tampil di seluruh wilayah Aceh dan luar daerah. Kami fleksibel dalam penempatan lokasi acara sesuai kebutuhan Anda.' },
+    { q: 'Bisa booking jauh hari sebelumnya?', a: 'Tentu! Bahkan kami sangat menyarankan booking jauh hari agar persiapan lebih matang. Semakin awal booking, semakin baik persiapan yang dapat kami lakukan.' },
+    { q: 'Bisa tampil di luar daerah Aceh?', a: 'Ya, kami menerima undangan tampil di luar provinsi Aceh dengan penyesuaian biaya akomodasi dan transportasi.' },
+    { q: 'Apakah bisa untuk acara sekolah dan kampus?', a: 'Sangat bisa! Kami memiliki pengalaman tampil di berbagai event sekolah dan kampus. Ini juga menjadi misi kami dalam menginspirasi generasi muda untuk mencintai budaya Aceh.' },
+    { q: 'Berapa jumlah anggota penari?', a: 'Jumlah penari dapat disesuaikan dengan kebutuhan acara Anda. Kami memiliki tim yang fleksibel dan dapat menyesuaikan formasi sesuai permintaan.' },
+    { q: 'Bisa tampil di acara pemerintahan resmi?', a: 'Tentu saja! Sanggar Bungong Keumang telah dipercaya untuk tampil di berbagai acara resmi pemerintahan daerah. Penampilan kami selalu profesional dan representatif.' },
+    { q: 'Apakah bisa tampil di acara pernikahan?', a: 'Pernikahan adalah spesialisasi utama kami! Dengan ratusan pengalaman tampil di acara pernikahan, kami siap membuat hari istimewa Anda semakin berkesan dengan nuansa budaya Aceh yang autentik.' },
+  ];
+
+  function renderFAQ() {
+    const container = document.getElementById('faq-container');
+    faqs.forEach((faq, i) => {
+      const item = document.createElement('div');
+      item.className = 'faq-item';
+      item.innerHTML = `
+        <button class="faq-question" onclick="toggleFAQ(${i})">
+          ${faq.q}
+          <i class="fas fa-plus faq-icon"></i>
+        </button>
+        <div class="faq-answer">${faq.a}</div>
+      `;
+      container.appendChild(item);
+    });
+  }
+
+  function toggleFAQ(i) {
+    const items = document.querySelectorAll('.faq-item');
+    items[i].classList.toggle('open');
+  }
+
+  // ====================================================
+  // FLOATING PARTICLES
+  // ====================================================
+  function createParticles() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.width = p.style.height = (Math.random() * 2 + 1) + 'px';
+      p.style.animationDuration = (Math.random() * 15 + 10) + 's';
+      p.style.animationDelay = (Math.random() * 10) + 's';
+      p.style.opacity = Math.random() * 0.4;
+      container.appendChild(p);
+    }
+  }
+
+  // ====================================================
+  // INIT
+  // ====================================================
+  renderTestimonials();
+  renderFAQ();
+  createParticles();
+
+  // ====================================================
+  // RESPONSIVE GRID
+  // ====================================================
+  const grids = document.querySelectorAll('[style*="grid-template-columns:1fr 1fr"]');
+  function checkGridResponsive() {
+    grids.forEach(g => {
+      if (window.innerWidth < 768) {
+        g.style.gridTemplateColumns = '1fr';
+      } else {
+        g.style.gridTemplateColumns = '';
+      }
+    });
+    // Service grid
+    const sg = document.querySelector('[style*="grid-template-columns:repeat(3,1fr)"]');
+    if (sg && window.innerWidth < 640) sg.style.gridTemplateColumns = '1fr 1fr';
+    // Footer grid
+    const fg = document.querySelector('[style*="grid-template-columns:2fr 1fr 1fr 1fr"]');
+    if (fg && window.innerWidth < 768) fg.style.gridTemplateColumns = '1fr 1fr';
+    if (fg && window.innerWidth < 480) fg.style.gridTemplateColumns = '1fr';
+  }
+  window.addEventListener('resize', checkGridResponsive);
+  checkGridResponsive();
+
+  </script>
+
+  <!--
+  ======================================================
+  PANDUAN KUSTOMISASI WEBSITE
+  ======================================================
+
+  📸 CARA MENAMBAH FOTO BARU KE GALERI:
+  Cari bagian <!-- Tambahkan foto baru di array galleryImages --> di HTML
+  Tambahkan div baru dengan pola:
+  <div class="gallery-item" data-cat="penampilan/latihan" onclick="openLightbox('URL_FOTO')">
+    <img src="URL_FOTO" alt="Deskripsi" loading="lazy" />
+    <div class="gallery-overlay">...</div>
+  </div>
+
+  📱 CARA MENGGANTI NOMOR WHATSAPP:
+  1. Cari semua teks "6282370494855" dan ganti dengan nomor baru (format: 62 + nomor tanpa 0)
+  2. Contoh: 0812-3456-7890 → 6281234567890
+  3. Ganti juga teks "0823-7049-4855" yang ditampilkan ke pengguna
+
+  💬 CARA MENGGANTI TESTIMONI:
+  Cari array "const testimonials" di JavaScript
+  Tambahkan atau edit objek dengan format:
+  { name: "Nama", loc: "Kota", rating: 5, text: "Komentar..." }
+
+  🎨 CARA MENGGANTI WARNA TEMA:
+  Cari bagian ":root" di CSS
+  Ganti nilai:
+  --gold: #c9a84c (warna emas)
+  --emerald: #10b981 (warna hijau)
+  --black: #0a0a0a (latar belakang gelap)
+
+  🖼️ CARA MENAMBAH VIDEO BACKGROUND:
+  Di section #cinematic, tambahkan tag video:
+  <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.15;">
+    <source src="URL_VIDEO.mp4" type="video/mp4">
+  </video>
+
+  🚀 CARA DEPLOY KE GITHUB PAGES:
+  1. Buat repository baru di GitHub
+  2. Upload file index.html ke repository
+  3. Masuk ke Settings → Pages
+  4. Source: Deploy from branch → pilih main/master
+  5. Folder: / (root)
+  6. Klik Save — website aktif di https://username.github.io/nama-repo
+
+  📁 STRUKTUR FOLDER (jika ingin diperluas):
+  sanggar-bungong-keumang/
+  ├── index.html        (halaman utama)
+  ├── assets/
+  │   ├── images/       (simpan foto lokal di sini)
+  │   └── videos/       (simpan video di sini)
+  └── README.md
+
+  ======================================================
+  -->
+
+</body>
+</html>
